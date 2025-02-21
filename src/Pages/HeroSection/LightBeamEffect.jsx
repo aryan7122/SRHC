@@ -9,20 +9,21 @@ const LightBeamEffect = () => {
         const ctx = canvas.getContext("2d");
 
 
-      
+
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             drawBeams();
-            drawSmoke();
+          
+            drawParticles()
         };
 
         function drawParticles() {
-            for (let i = 0; i < 7; i++) {
+            for (let i = 0; i < 137; i++) {
                 let x = Math.random() * canvas.width;
                 let y = Math.random() * canvas.height;
                 let size = Math.random() * 1;
-                let opacity = Math.random() * 0.2 + 0.1;
+                let opacity = Math.random() * 0.6 + 1;
 
                 ctx.beginPath();
                 ctx.arc(x, y, size, 0, Math.PI * 1);
@@ -56,29 +57,17 @@ const LightBeamEffect = () => {
             }
         };
 
-        const drawSmoke = () => {
-            let smokeImage = new Image();
-            smokeImage.src = ''; // अपनी स्मोक इमेज रखें
-
-            smokeImage.onload = () => {
-                let x = canvas.width / 1 - 150;
-                let y = canvas.height - 300;
-                ctx.globalAlpha = 0.5;
-                ctx.drawImage(smokeImage, x, y, 300, 300);
-                ctx.globalAlpha = 1;
-            };
-           
-            
-        };
+      
         function animate() {
-
+            // ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // drawBeams();
             drawParticles();
-            requestAnimationFrame(animate);
+            // setTimeout(() => requestAnimationFrame(animate), 12);
         }
         resizeCanvas();
 
         animate();
-       
+
         window.addEventListener("resize", resizeCanvas);
     }, []);
 
@@ -86,4 +75,4 @@ const LightBeamEffect = () => {
 };
 
 export default LightBeamEffect;
-// 
+// //

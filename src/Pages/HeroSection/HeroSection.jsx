@@ -8,6 +8,7 @@ import playStore from "../../assets/Hero/playstore.png";
 import SmokeEffect from "./SmokeEffect";
 import LightBeamEffect from "./LightBeamEffect";
 import gsap from "gsap";
+import Smoke from "./Smoke";
 
 const HeroSection = () => {
     const leftRef = useRef(null);
@@ -24,8 +25,8 @@ const HeroSection = () => {
         // Doctor Image Slide-In
         tl.fromTo(
             doctorRef.current,
-            { x: -100, opacity: 0 },
-            { x: 0, opacity: 1, duration: 1.5, ease: "power2.out" }
+            { y: 300, opacity: 0,scale:0 }, 
+            { y: 0, opacity: 1, scale: 1, duration: 1, ease: "power2.out" }
         );
 
         // Typing Effect Function (Fixed)
@@ -80,6 +81,7 @@ const HeroSection = () => {
     return (
         <div className="hero-section">
             <LightBeamEffect />
+             <Smoke />
             <div className="hero-content">
                 <div className="text-container">
                     <img
