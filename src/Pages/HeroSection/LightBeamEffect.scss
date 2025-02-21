@@ -1,0 +1,34 @@
+.light-beam-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.5;
+    animation: beamGlow 5s infinite alternate ease-in-out, beamTravel 1.2s ease-out;
+    
+
+}
+
+@keyframes beamGlow {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes beamTravel {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+}

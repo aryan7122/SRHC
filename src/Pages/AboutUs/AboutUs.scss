@@ -1,0 +1,103 @@
+.about-us {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f9f9f9;
+  padding-top: 100px;
+  .content {
+    width: 600px;
+
+    .tag {
+      display: inline-block;
+      background: #b8b8b81a;
+      color: #1b3e9f;
+      padding: 5px 10px;
+      border-radius: 100px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17.36px;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 57.6px;
+      letter-spacing: -2.2px;
+      color: #2b2a2a;
+    }
+
+    p {
+      font-weight: 400;
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: -1%;
+      color: #55545d;
+    }
+
+    
+    .contact-btn {
+      width: 252px;
+      height: 54px;
+            margin-top: 70px;
+      padding: 8px 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      border: 2px solid #fff;
+      background: #6656E0;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+        &:active {
+            scale: 0.95;
+            transition: 0.3s linear;
+          }
+    }
+
+    .contact-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: 0.5s;
+    }
+
+    .contact-btn:hover::before {
+      left: 100%;
+    }
+
+    .contact-btn:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-3px);
+      /* Slight hover lift */
+    }
+  }
+
+  .image-container {
+    max-width: 50%;
+
+    img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

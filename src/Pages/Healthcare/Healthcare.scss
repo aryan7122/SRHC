@@ -1,0 +1,373 @@
+.healthcare-container {
+  padding: 40px;
+  background-color: #f8f6f2;
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+
+  .features-section {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    .text-content {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 48px;
+        line-height: 57px;
+        letter-spacing: -2.2px;
+        font-weight: bold;
+        color: #2b2a2a;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        width: 793px;
+      }
+
+      p {
+        width: 723px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -1%;
+        color: #55545d;
+        text-transform: capitalize;
+      }
+
+      .contact-btn {
+        width: 202px;
+        height: 54px;
+        // padding: 8px 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: 2px solid #fff;
+        background: #6656e0;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        &:active {
+          scale: 0.95;
+          transition: 0.3s linear;
+        }
+      }
+
+      .contact-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: 0.5s;
+      }
+
+      .contact-btn:hover::before {
+        left: 100%;
+      }
+
+      .contact-btn:hover {
+        background: #000;
+        color: #fff;
+        transform: translateY(-3px);
+        /* Slight hover lift */
+      }
+    }
+    .features_2_ {
+      display: grid;
+      align-items: start;
+      margin-top: 50px;
+      grid-template-columns: 1fr 1fr;
+      .features-text {
+        text-align: left;
+        margin-bottom: 20px;
+        width: 90%;
+
+        .tag {
+          display: inline-block;
+          background: #b8b8b81a;
+          color: #1b3e9f;
+          padding: 5px 10px;
+          border-radius: 100px;
+          font-weight: bold;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17.36px;
+          letter-spacing: 0%;
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 28px;
+          font-weight: bold;
+          color: #1c1c1c;
+          margin-top: 10px;
+        }
+
+        p {
+          color: #666;
+          font-size: 16px;
+          line-height: 1.5;
+        }
+        .featuresImg {
+          margin-top: 20px;
+          width: 100%;
+          height: 583px;
+          background: #1b125b;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+
+      .features-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .feature-card {
+          border: 1px solid #95decb;
+          border-radius: 10px;
+          padding: 20px;
+          transition: 0.3s;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &:hover {
+            border: 1px solid #231877;
+            background: #e8f8f4;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          }
+
+          h4 {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1c1c1c;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+          }
+
+          .contact-btn {
+            width: 202px;
+            height: 54px;
+            // padding: 8px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            border: 2px solid #fff;
+            background: #6656e0;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+
+            &:active {
+              scale: 0.95;
+              transition: 0.3s linear;
+            }
+          }
+
+          .contact-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: 0.5s;
+          }
+
+          .contact-btn:hover::before {
+            left: 100%;
+          }
+
+          .contact-btn:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-3px);
+            /* Slight hover lift */
+          }
+
+          //
+          .Download-button {
+            width: 192px;
+            height: 49px;
+            padding: 0px 6px 0px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            border: 2px solid #fff;
+            background: #7f72e5;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .Download-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: 0.5s;
+          }
+
+          .Download-button:hover::before {
+            left: 100%;
+          }
+
+          .Download-button:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-3px);
+            /* Slight hover lift */
+          }
+
+          .Download-button:active {
+            transform: scale(0.95);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+          }
+
+          @keyframes arrowMove {
+            0%,
+            100% {
+              opacity: 0.95;
+              scale: 0.95;
+            }
+
+            50% {
+              opacity: 1;
+              scale: 1;
+            }
+          }
+
+          @keyframes arrowJump {
+            0%,
+            100% {
+              transform: translateY(0);
+            }
+
+            50% {
+              transform: translateY(-3px);
+            }
+          }
+
+          .arrow-icon {
+            color: #fff;
+            width: 26.67px;
+            height: 26.67px;
+            padding: 5px;
+            margin-left: 8px;
+            transition: all 0.3s ease-in-out;
+            animation: arrowMove 1s infinite ease-in-out;
+          }
+
+          .Download-button:hover .arrow-icon {
+            //   background: #8ae9f0;
+            //   color: #643434;
+            animation: arrowJump 0.6s infinite ease-in-out;
+            transform: rotate(360deg);
+            /* Smooth rotation on hover */
+          }
+          //
+        }
+        .feature-card:nth-child(1) {
+          grid-column: span 2;
+          flex-direction: row;
+          align-items: center;
+          h4,
+          p {
+            width: 220px;
+          }
+        }
+        .feature-card:nth-child(2) {
+         
+          h4,
+          p {
+           margin-bottom: 50px;
+          }
+        }
+        .feature-card:nth-child(4) {
+          grid-column: span 2;
+          flex-direction: row;
+          align-items: center;
+          h4,
+          p {
+            width: 220px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .healthcare-container {
+    padding: 20px;
+
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+
+      .text-content {
+        max-width: 100%;
+      }
+
+      .image-content {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+    }
+
+    .features-section .features-content {
+      grid-template-columns: 1fr;
+    }
+  }
+}
