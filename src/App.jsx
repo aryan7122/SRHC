@@ -7,6 +7,10 @@ import AppStand from "./Pages/AppStand/AppStand";
 import Steps from "./Pages/Steps/Steps";
 import Pricing from "./Pages/PlansData/Pricing";
 import HealthcareCommunity from "./Pages/HealthcareCommunity/HealthcareCommunity";
+import TestimonialSlider from "./Pages/TestimonialSlider/TestimonialSlider";
+import FAQAccordion from "./Pages/FAQAccordion/FAQAccordion";
+import ContactForm from "./Pages/ContactForm/ContactForm";
+import Footer from "./Components/Footer/Footer";
 
 
 function App() {
@@ -26,6 +30,10 @@ function App() {
                 <Steps/>
                 <Pricing />
                 <HealthcareCommunity/>
+                <TestimonialSlider />
+                <FAQAccordion />
+                <ContactForm />
+                <Footer/>
               </>
             }
           />
