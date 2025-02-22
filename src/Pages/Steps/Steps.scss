@@ -1,94 +1,242 @@
 .steps-container {
+  text-align: center;
+  padding: 60px;
+  background: #eaf7f2; // Light Greenish background
+
+  .heading {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+    letter-spacing: -2.2px;
+    color: #2b2a2a;
+
+    span {
+      color: #0d0d0d;
+    }
+  }
+
+  .subheading {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -1.5%;
     text-align: center;
-    padding: 3rem 2rem;
-    background: #eaf7f2; // Light Greenish background
+    color: #0d0d0db2;
+  }
 
-    .heading {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #333;
+  .buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 
-        span {
-            color: #0d0d0d;
-        }
+    .contact-btn {
+      width: 182px;
+      height: 50px;
+      // padding: 8px 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      border: 2px solid #fff;
+      background: #6656e0;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+
+      &:active {
+        scale: 0.95;
+        transition: 0.3s linear;
+      }
     }
 
-    .subheading {
-        font-size: 1.2rem;
-        color: #555;
-        margin-top: 0.5rem;
+    .contact-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: 0.5s;
     }
 
-    .buttons {
-        margin-top: 1rem;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-
-        .btn {
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .primary {
-            background: #6d4afe;
-            color: white;
-        }
-
-        .secondary {
-            background: #fff;
-            color: #6d4afe;
-            border: 1px solid #6d4afe;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
+    .contact-btn:hover::before {
+      left: 100%;
     }
 
-    .steps {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-        gap: 2rem;
+    .contact-btn:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-3px);
+      /* Slight hover lift */
+    }
 
-        .step-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 1.5rem;
+    //
+    .Download-button {
+      width: 192px;
+      height: 50px;
+      //  padding: 0px 6px 0px 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      border: 2px solid #fff;
+      background: #7f72e5;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .Download-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: 0.5s;
+    }
+
+    .Download-button:hover::before {
+      left: 100%;
+    }
+
+    .Download-button:hover {
+      background: #000;
+      color: #fff;
+      transform: translateY(-3px);
+      /* Slight hover lift */
+    }
+
+    .Download-button:active {
+      transform: scale(0.95);
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    }
+
+    @keyframes arrowMove {
+      0%,
+      100% {
+        opacity: 0.95;
+        scale: 0.95;
+      }
+
+      50% {
+        opacity: 1;
+        scale: 1;
+      }
+    }
+
+    @keyframes arrowJump {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+
+    .arrow-icon {
+      color: #fff;
+      width: 26.67px;
+      height: 26.67px;
+      padding: 5px;
+      margin-left: 8px;
+      transition: all 0.3s ease-in-out;
+      animation: arrowMove 1s infinite ease-in-out;
+    }
+
+    .Download-button:hover .arrow-icon {
+      //   background: #8ae9f0;
+      //   color: #643434;
+      animation: arrowJump 0.6s infinite ease-in-out;
+      transform: rotate(360deg);
+      /* Smooth rotation on hover */
+    }
+
+    //
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    margin-top: 330px;
+    gap: 2rem;
+    width: 100%;
+   
+    .step-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      height: 190px;
+      transition: transform 0.3s ease-in-out;
+       border: 1px solid rgba(132, 131, 131, 0.361);
+      position: relative;
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .step-img {
+        position: absolute;
+        width: 100%;
+        max-width: 185px;
+        margin-bottom: 350px;
+      }
+
+      .step-info {
+        width: 100%;
+        text-align: left;
+        margin-bottom: -100px;
+        .step-number {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17.36px;
+          letter-spacing: 5%;
+          color: #00000060;
+          span {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24.8px;
+            letter-spacing: 5%;
             text-align: center;
-            width: 240px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-
-            &:hover {
-                transform: translateY(-5px);
-            }
-
-            .step-img {
-                width: 100%;
-                max-width: 180px;
-                margin-bottom: 1rem;
-            }
-
-            .step-info {
-                .step-number {
-                    font-size: 1rem;
-                    color: #777;
-                    font-weight: 600;
-                }
-
-                .step-title {
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                    color: #222;
-                }
-            }
+          }
         }
+      }
+
+      .step-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -2.5%;
+        color: #0d654e;
+      }
     }
+  }
 }

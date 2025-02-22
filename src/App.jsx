@@ -5,6 +5,8 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Healthcare from "./Pages/Healthcare/Healthcare";
 import AppStand from "./Pages/AppStand/AppStand";
 import Steps from "./Pages/Steps/Steps";
+import Pricing from "./Pages/PlansData/Pricing";
+import HealthcareCommunity from "./Pages/HealthcareCommunity/HealthcareCommunity";
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
                 <Healthcare />
                 <AppStand/>
                 <Steps/>
+                <Pricing />
+                <HealthcareCommunity/>
               </>
             }
           />

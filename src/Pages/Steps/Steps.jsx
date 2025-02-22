@@ -4,6 +4,7 @@ import step1 from "../../assets/step/step1.png"; // Apni images ka path set karo
 import step2 from "../../assets/step/step2.png";
 import step3 from "../../assets/step/step3.png";
 import step4 from "../../assets/step/step4.png";
+import { ArrowDownToLine } from "lucide-react";
 
 const Steps = () => {
     const steps = [
@@ -39,8 +40,11 @@ const Steps = () => {
             </p>
 
             <div className="buttons">
-                <button className="btn primary">See How It Works</button>
-                <button className="btn secondary">Download App now</button>
+                <button className="btn contact-btn">See How It Works</button>
+                <button className="Download-button">
+                    Download now
+                    <ArrowDownToLine className="arrow-icon" size={20} strokeWidth={3} />
+                </button>
             </div>
 
             <div className="steps">
@@ -48,7 +52,7 @@ const Steps = () => {
                     <div key={step.id} className="step-card">
                         <img src={step.img} alt={step.title} className="step-img" />
                         <div className="step-info">
-                            <p className="step-number">STEP-{step.id}</p>
+                            <p className="step-number">STEP- <span>{step.id}</span></p>
                             <h3 className="step-title">{step.title}</h3>
                         </div>
                     </div>
