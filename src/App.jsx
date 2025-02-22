@@ -3,6 +3,8 @@ import Navbar from './Components/Navbar/Navbar';
 import HeroSection from "./Pages/HeroSection/HeroSection";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Healthcare from "./Pages/Healthcare/Healthcare";
+import AppStand from "./Pages/AppStand/AppStand";
+import Steps from "./Pages/Steps/Steps";
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
                 <HeroSection />
                 <AboutUs />
                 <Healthcare />
+                <AppStand/>
+                <Steps/>
               </>
             }
           />

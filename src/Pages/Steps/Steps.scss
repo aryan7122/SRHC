@@ -1,0 +1,94 @@
+.steps-container {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #eaf7f2; // Light Greenish background
+
+    .heading {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+
+        span {
+            color: #0d0d0d;
+        }
+    }
+
+    .subheading {
+        font-size: 1.2rem;
+        color: #555;
+        margin-top: 0.5rem;
+    }
+
+    .buttons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .primary {
+            background: #6d4afe;
+            color: white;
+        }
+
+        .secondary {
+            background: #fff;
+            color: #6d4afe;
+            border: 1px solid #6d4afe;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    .steps {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        gap: 2rem;
+
+        .step-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            width: 240px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .step-img {
+                width: 100%;
+                max-width: 180px;
+                margin-bottom: 1rem;
+            }
+
+            .step-info {
+                .step-number {
+                    font-size: 1rem;
+                    color: #777;
+                    font-weight: 600;
+                }
+
+                .step-title {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: #222;
+                }
+            }
+        }
+    }
+}
