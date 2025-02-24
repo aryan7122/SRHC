@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./TestimonialSlider.scss";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-// import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { ArrowDownToLine, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
     {
@@ -28,64 +27,104 @@ const testimonials = [
         rating: 4,
         image: "https://randomuser.me/api/portraits/men/1.jpg",
     },
+    {
+        name: "Ravi Kumar",
+        role: "Software Engineer, Tech Corp",
+        review:
+            "This app has revolutionized the way I manage my healthcare needs. From appointments to reports, everything is just a click away.",
+        rating: 5,
+        image: "https://randomuser.me/api/portraits/men/2.jpg",
+    },
+    {
+        name: "Simran Kaur",
+        role: "Marketing Manager, Health Plus",
+        review:
+            "A seamless experience! The UI is intuitive, and the services are top-notch. Highly recommended for busy professionals.",
+        rating: 2,
+        image: "https://randomuser.me/api/portraits/women/3.jpg",
+    },
 ];
 
 const TestimonialSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const cardsPerSlide = 3;
 
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+        setCurrentIndex((prevIndex) =>
+            prevIndex + 1 < testimonials.length - (cardsPerSlide - 1) ? prevIndex + 1 : 0
+        );
     };
 
     const prevSlide = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+            prevIndex === 0 ? testimonials.length - (cardsPerSlide - 1) : prevIndex - 1
         );
     };
 
     return (
         <div className="testimonial-section">
-            <h2>What Our Users Say</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className="top-title01">
+                <div>
+                    <h2>What Our Users Say</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+                <button className="Download-button">
+                    Download now
+                    <ArrowDownToLine className="arrow-icon" size={20} strokeWidth={3} />
+                </button>
+            </div>
             <div className="testimonial-slider">
-                <button className="prev-btn" onClick={prevSlide}>
-                    {/* <FaArrowLeft /> */}
-                    <ChevronLeft />
-                </button>
-                <div className="testimonial-card">
-                    <div className="stars">
-                        {Array(testimonials[currentIndex].rating)
-                            .fill()
-                            .map((_, i) => (
-                                <span key={i}>⭐</span>
-                            ))}
-                    </div>
-                    <p className="review">{testimonials[currentIndex].review}</p>
-                    <div className="user-info">
-                        <img src={testimonials[currentIndex].image} alt="User" />
-                        <div>
-                            <h4>{testimonials[currentIndex].name}</h4>
-                            <p>{testimonials[currentIndex].role}</p>
+
+                <div className="testimonial-container">
+                    {testimonials.slice(currentIndex, currentIndex + cardsPerSlide).map((testimonial, index) => (
+                        <div className="testimonial-card" key={index}>
+                            <div className="stars">
+                                {[...Array(5)].map((_, i) => (
+                                    <span
+                                        key={i}
+                                        style={{ opacity: i < testimonial.rating ? 1 : 0.3 }}
+                                    >
+                                        ⭐
+                                    </span>
+                                ))}
+                            </div>
+                            <p className="review">{testimonial.review}</p>
+                            <div className="user-info">
+                                <img src={testimonial.image} alt="User" />
+                                <div>
+                                    <h4>{testimonial.name}</h4>
+                                    <p>{testimonial.role}</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
-                <button className="next-btn" onClick={nextSlide}>
-                    {/* <FaArrowRight /> */}
-                    <ChevronRight />
-                </button>
+
             </div>
-            <div className="dots">
-                {testimonials.map((_, index) => (
-                    <span
-                        key={index}
-                        className={index === currentIndex ? "dot active" : "dot"}
-                        onClick={() => setCurrentIndex(index)}
-                    ></span>
-                ))}
+            <div className="actionSlider">
+
+                <div className="dots">
+                    {testimonials.map((_, index) => (
+                        <span
+                            key={index}
+                            className={index === currentIndex ? "dot active" : "dot"}
+                            onClick={() => setCurrentIndex(index)}
+                        ></span>
+                    ))}
+                </div>
+                <div className="btn-slide">
+                    <button className="prev-btn" onClick={prevSlide}>
+                        <ChevronLeft />
+                    </button>
+                    <button className="next-btn" onClick={nextSlide}>
+                        <ChevronRight />
+                    </button>
+                </div>
             </div>
-            <button className="download-btn">Download Now!</button>
+           
         </div>
     );
 };
 
 export default TestimonialSlider;
+// 

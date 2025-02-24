@@ -1,128 +1,259 @@
 .testimonial-section {
-    text-align: center;
-    background: linear-gradient(to right, #f8e8ff, #e6f7ff);
-    padding: 50px 20px;
-    border-radius: 10px;
+  text-align: center;
+  background: linear-gradient(to right, #f8e8ff, #e6f7ff);
 
+  border-radius: 10px;
+  .top-title01 {
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
     h2 {
-        color: #1d3c34;
-        font-size: 28px;
-        font-weight: bold;
+      color: #1d3c34;
+      font-size: 28px;
     }
 
     p {
-        color: #555;
-        margin-bottom: 20px;
+      color: #555;
+      margin-bottom: 20px;
     }
+  }
 }
 
 .testimonial-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    max-width: 800px;
-    margin: auto;
+  padding: 0px 60px 60px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  // max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
 }
 
 .testimonial-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    width: 80%;
-    transition: all 0.3s ease;
-}
-
-.stars {
+  width: 440px;
+  height: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border: 1px solid #95decb;
+  // width: 80%;
+  transition: all 0.3s ease;
+  .stars {
+    width: 20px;
     color: #ffcc00;
     font-size: 18px;
-}
+  }
 
-.review {
-    font-size: 16px;
+  .review {
+    margin-top: 15px !important;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
     color: #333;
     margin: 10px 0;
-}
+  }
 
-.user-info {
+  .user-info {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-
+    margin-top: 20px;
     img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
     }
 
     h4 {
-        margin: 0;
-        font-size: 16px;
-        font-weight: bold;
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
     }
 
     p {
-        margin: 0;
-        font-size: 14px;
-        color: #777;
+      margin: 0;
+      font-size: 14px;
+      color: #777;
     }
+  }
 }
 
-.prev-btn,
-.next-btn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #555;
-    position: absolute;
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-.dots {
+.actionSlider {
+  padding: 0px 60px 60px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .dots {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
+  
     .dot {
-        width: 10px;
-        height: 10px;
-        background: #ccc;
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-        transition: background 0.3s;
-
-        &.active {
-            background: #555;
-        }
+      width: 10px;
+      height: 10px;
+      background: #ccc;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+  
+      &.active {
+        background: #555;
+      }
     }
-}
+  }
+  .prev-btn,
+  .next-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+      border: 1px solid #231877;
+      width: 48px;
+      height: 48px;
+      border-radius: 100px;
+      background: #fff;
+      :active{
+        color: #231877;
+      }
+      // position: absolute;
+  }
 
-.download-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #9062f8;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+  .prev-btn {
+      left: 10;
+      margin-right: 20px;
+  }
 
-    &:hover {
-        background: #7648d8;
-    }
+  .next-btn {
+      right: 10px;
+  }
 }
 
 //
+.Download-button {
+  width: 192px;
+  height: 49px;
+  padding: 0px 6px 0px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 2px solid #fff;
+  background: #7f72e5;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.Download-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+}
+
+.Download-button:hover::before {
+  left: 100%;
+}
+
+.Download-button:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+  /* Slight hover lift */
+}
+
+.Download-button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes arrowMove {
+  0%,
+  100% {
+    opacity: 0.95;
+    scale: 0.95;
+  }
+
+  50% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes arrowJump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.arrow-icon {
+  color: #fff;
+  width: 26.67px;
+  height: 26.67px;
+  padding: 5px;
+  margin-left: 8px;
+  transition: all 0.3s ease-in-out;
+  animation: arrowMove 1s infinite ease-in-out;
+}
+
+.Download-button:hover .arrow-icon {
+  //   background: #8ae9f0;
+  //   color: #643434;
+  animation: arrowJump 0.6s infinite ease-in-out;
+  transform: rotate(360deg);
+  /* Smooth rotation on hover */
+}
+
+//
+
+//
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonial-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
