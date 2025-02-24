@@ -26,11 +26,10 @@
     width: 100%;
     // max-width: 1300px;
     position: relative;
-
+    
     .text-container {
-      overflow: hidden;
       height: 700px;
-      margin-bottom: -272px;
+      margin-bottom: -380px;
       //   position: absolute;
       padding: 10px;
       width: 80%;
@@ -59,13 +58,16 @@
         mix-blend-mode: difference;
       }
       .doctor-img {
+        // border: 1px solid red;
         position: absolute;
         top: 26px;
         left: 285px;
+        height: 521px;
         z-index: -1;
         mix-blend-mode: multiply;
       }
       .buttons {
+        margin-top: 40px;
         display: flex;
         gap: 15px;
 
@@ -129,23 +131,22 @@
 
     .images-container {
       width: 45%;
-
       height: 800px;
       position: relative;
-
+      
       .left-mobile {
         position: absolute;
-        left: -110px ;
-        height: 440px;
+        left: -270px ;
+        height: 570px;
         z-index: 1;
         bottom: -70px;
       }
-
+      
       .right-mobile {
         position: absolute;
         right: -50px;
         bottom: -100px;
-        height: 555px;
+        height: 700px;
         z-index: 3;
       }
     }

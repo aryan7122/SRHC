@@ -118,7 +118,7 @@ const HeroSection = () => {
                     />
                 </div>
             </div>
-            <SmokeEffect />
+            {/* <SmokeEffect /> */}
         </div>
     );
 };
