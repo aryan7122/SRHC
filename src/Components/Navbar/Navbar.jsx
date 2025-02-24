@@ -75,7 +75,7 @@ function Navbar() {
                         <li onClick={() => toggleMenu()}><Link to="/features" className={isActive('/features')}>Features</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/how-it-work" className={isActive('/how-it-work')}>How it works</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/pricing" className={isActive('/pricing') || isActive('/pricing')}>Pricing</Link></li>
-                        <li onClick={() => toggleMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/contact" className={isActive('/contact')}>Contact</Link></li>
                     </ul>
                 }
 
