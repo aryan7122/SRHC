@@ -31,7 +31,7 @@ const Steps = () => {
     ];
 
     return (
-        <section className="steps-container">
+        <section className="steps-container" id="how-it-work">
             <h2 className="heading">
                 Start Healthy Journey In <span>4 Simple Steps</span>
             </h2>

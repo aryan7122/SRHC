@@ -4,7 +4,7 @@ import img from '../../assets/about/img.jpeg';
 
 const AboutUs = () => {
     return (
-        <section className="about-us">
+        <section className="about-us" id="about">
             <div className="content">
                 <span className="tag">ABOUT US</span>
                 <h2>About SR Healthcare Community</h2>

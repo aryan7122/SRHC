@@ -26,7 +26,7 @@ const faqs = [
     }
 ];
 
-const FAQAccordion = () => {
+const FAQAccordion = ({ ContactUs }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggleFAQ = (index) => {
@@ -35,8 +35,8 @@ const FAQAccordion = () => {
 
     return (
         <div className="faq-section">
-            <h2 className="faq-title">Your Questions Answered</h2>
-            <p className="faq-subtitle">We're here to help you.</p>
+            <h2 className={`faq-title ${ContactUs}`}>Your Questions Answered</h2>
+            <p className={`faq-subtitle ${ContactUs}`}>We're here to help you.</p>
             <div className="faq-container">
                 {faqs.map((faq, index) => (
                     <div

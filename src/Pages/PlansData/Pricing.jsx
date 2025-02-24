@@ -8,7 +8,7 @@ const Pricing = () => {
     const plans = plansData[activePlan];
 
     return (
-        <section className="pricing-container">
+        <section className="pricing-container" id="pricing">
             <div className="pricing-header">
                 <div>
                     <h2>Curated Pricing Plans</h2>

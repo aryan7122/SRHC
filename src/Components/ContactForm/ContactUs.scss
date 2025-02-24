@@ -1,0 +1,190 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 60px;
+  background-color: #f9f9f9;
+
+  .contact-info {
+    // max-width: 40%;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    .contact-heading {
+      color: #1b3e9f;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17.36px;
+      letter-spacing: 0%;
+      text-align: center;
+      background: #b8b8b81a;
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+
+    .main-heading {
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 68px;
+      letter-spacing: -1px;
+      color: #0a4d3c;
+      text-align: left;
+      margin-bottom: 10px;
+      width: 590px;
+    }
+
+    .description {
+      color: #000;
+      text-align: left;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0%;
+      margin-bottom: 20px;
+    }
+
+    .contact-details {
+      p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        color: #444;
+        margin: 10px 0;
+      }
+
+      i {
+        color: #0c5adb;
+      }
+      svg {
+        color: #231877;
+      }
+
+      a {
+        font-size: 20px;
+        font-weight: 400;
+        color: #231877;
+        text-decoration: none;
+      }
+    }
+
+    .contact-image {
+      width: 540px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  }
+
+  .contact-form {
+    //   border: 1px solid red;
+    // background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .form-row {
+        display: flex;
+        gap: 10px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        label {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          margin-bottom: 5px;
+          text-align: start;
+          color: #010009;
+        }
+
+        input,
+        select,
+        textarea {
+          width: 300px;
+          padding: 10px;
+          border: 1px solid #95decb;
+          border-radius: 5px;
+          font-size: 16px;
+          outline: none;
+          &:hover {
+            border: 1px solid #02f8d7;
+            box-shadow: 0px 0px 4px 0.1px #02f8d76a;
+          }
+          &:focus {
+            border: 1px solid #02cbf8;
+            box-shadow: 0px 0px 4px 0.1px #02f8d7;
+          }
+        }
+
+        textarea {
+          height: 100px;
+          width: 100%;
+        }
+                select{
+                    width: 100%;
+                }
+      }
+      .inquiry-type {
+        .l-1 {
+          display: flex;
+          font-weight: 500;
+          margin-bottom: 10px;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          text-align: left !important;
+        }
+        .radio-group {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+          label {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0%;
+            cursor: pointer;
+            display: flex;
+            text-align: left;
+            gap: 5px;
+          }
+          input[type="radio"] {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      .submit-btn {
+        background: #7F72E5;
+        color: #fff;
+        padding: 10px 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      margin: 0 auto;
+      margin-top: 20px;
+        &:hover {
+          background: #655ab4;
+        }
+      }
+    }
+  }
+}

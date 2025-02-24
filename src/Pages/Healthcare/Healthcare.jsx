@@ -4,11 +4,8 @@ import { ArrowDownToLine } from "lucide-react";
 import featuresImg from '../../assets/features/features.png'
 const Healthcare = () => {
     return (
-        <div className="healthcare-container">
-            {/* Section 1: About */}
-
-            {/* Section 2: Features */}
-            <section className="features-section">
+        <div className="healthcare-container" id="Features">
+            <section className="features-section" >
                 <div className="text-content">
                     <div>
                         <h2>who are SR healthacare Community?</h2>
@@ -39,7 +36,7 @@ const Healthcare = () => {
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur. Euismod nunc facilisis tortor risus non nisl viverra.
                                 </p>
-                           </div>
+                            </div>
                             <button className="Download-button">
                                 Download now
                                 <ArrowDownToLine className="arrow-icon" size={20} strokeWidth={3} />
@@ -85,7 +82,7 @@ const Healthcare = () => {
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur. Euismod nunc facilisis tortor risus non nisl viverra.
                                 </p>
-                           </div>
+                            </div>
                             <button className="contact-btn">Contact Us For Details</button>
                         </div>
                     </div>

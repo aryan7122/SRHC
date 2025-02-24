@@ -11,6 +11,8 @@ import TestimonialSlider from "./Pages/TestimonialSlider/TestimonialSlider";
 import FAQAccordion from "./Pages/FAQAccordion/FAQAccordion";
 import ContactForm from "./Pages/ContactForm/ContactForm";
 import Footer from "./Components/Footer/Footer";
+import ContactUs from "./Components/ContactForm/ContactUs";
+
 
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path="/"
+            path="/*"
             element={
               <>
                 <HeroSection />
@@ -34,6 +36,16 @@ function App() {
                 <FAQAccordion />
                 <ContactForm />
                 <Footer/>
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <ContactUs />
+                <FAQAccordion ContactUs='ContactUs' />
+                <Footer />
               </>
             }
           />
