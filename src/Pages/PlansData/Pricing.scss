@@ -173,9 +173,13 @@
     left: 100%;
   }
   .toggle-buttons button:hover {
-    background: #000;
-    color: #fff;
-    transform: translateY(-1px);
+    // background: #000;
+    color: #7f72e5;
+    &.active {
+        background: #7f72e5;
+        color: white;
+      }
+    transform: translateY(-0.1px);
     /* Slight hover lift */
   }
 
