@@ -12,22 +12,22 @@ const Smoke = () => {
         let animationFrameId;
 
         const createSmokeParticles = () => {
-            const smokeCount = Math.floor(Math.random() * 2) + 10; // 10-12 नए particles आएंगे
+            const smokeCount = Math.floor(Math.random() * 2) + 20; // 10-12 
 
             for (let i = 0; i < smokeCount; i++) {
                 smokeParticles.push({
-                    x: canvas.width - Math.random() * 1000 - 50, // Right side से random position
-                    y: canvas.height - Math.random() * 10 - 150, // नीचे से उठेगा
-                    opacity: Math.random() * 0.5 + 1, // हल्का transparent
-                    speedY: Math.random() * 0.3 + 0.2, // ऊपर जाने की गति
-                    speedX: Math.random() * 0.2 - 0.1, // हल्का दाएं-बाएं move
-                    size: Math.random() * 180 + 270, // Smoke size अलग-अलग होगा
+                    x: canvas.width - Math.random() * 1000 - 50, // Right side to random position
+                    y: canvas.height - Math.random() * 10 - 150, // 
+                    opacity: Math.random() * 0.8 + 1, // 
+                    speedY: Math.random() * 0.3 + 0.2, //
+                    speedX: Math.random() * 0.2 - 0.1, // move
+                    size: Math.random() * 180 + 270, // Smoke size 
                 });
             }
         };
 
         const drawSmoke = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // Canvas साफ करें
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Canvas 
 
             let smokeImage = new Image();
             smokeImage.src = smokeImg; // Smoke Image
@@ -38,11 +38,10 @@ const Smoke = () => {
                 ctx.globalAlpha = 1;
 
                 // Motion update
-                smoke.y -= smoke.speedY; // धीरे-धीरे ऊपर जाएगा
-                smoke.x += smoke.speedX; // हल्का-सा दाएं-बाएं हिलेगा
-                smoke.opacity -= 0.001; // धीरे-धीरे fade होगा
+                smoke.y -= smoke.speedY; // 
+                smoke.x += smoke.speedX; //
+                smoke.opacity -= 0.001; // 
 
-                // अगर smoke पूरी तरह fade हो गया तो remove करो
                 if (smoke.opacity <= 0) {
                     smokeParticles.splice(index, 1);
                 }
@@ -51,7 +50,7 @@ const Smoke = () => {
             animationFrameId = requestAnimationFrame(drawSmoke); // Smooth Animation
         };
 
-        const smokeInterval = setInterval(createSmokeParticles, 3000); // हर 3 सेकंड में नए particles add होंगे
+        const smokeInterval = setInterval(createSmokeParticles, 3000); //
 
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;

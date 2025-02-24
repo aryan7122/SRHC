@@ -50,6 +50,14 @@
   border: 1px solid #95decb;
   // width: 80%;
   transition: all 0.3s ease;
+  @media only screen and (max-width: 1400px) {
+    width: 400px;
+      height: 310px;
+    }
+  @media only screen and (max-width: 1340px) {
+    width: 360px;
+      height: 330px;
+    }
   .stars {
     width: 20px;
     color: #ffcc00;

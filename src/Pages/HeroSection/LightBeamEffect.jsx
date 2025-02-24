@@ -8,14 +8,11 @@ const LightBeamEffect = () => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
 
-
-
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             drawBeams();
-          
-            drawParticles()
+            drawParticles();
         };
 
         function drawParticles() {
@@ -26,17 +23,23 @@ const LightBeamEffect = () => {
                 let opacity = Math.random() * 0.6 + 1;
 
                 ctx.beginPath();
-                ctx.arc(x, y, size, 0, Math.PI * 1);
+                ctx.arc(x, y, size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
                 ctx.fill();
             }
         }
+
         const drawBeams = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            let beamCount = 25; // 15 अलग-अलग किरणें
+            let beamCount = 25;
             let startX = canvas.width / 1.4;
-            let startY = -220; // ऊपर से स्टार्ट
+            let startY = -220;
+
+            let screenWidth = canvas.width;
+            let baseWidth = 70; // Base width
+            let maxBeamWidth = 120; // Max width for wide screens
+            let minBeamWidth = 40; // Min width for small screens
 
             for (let i = 0; i < beamCount; i++) {
                 let angle = (i - beamCount / 2) * 3;
@@ -51,28 +54,35 @@ const LightBeamEffect = () => {
                 ctx.beginPath();
                 ctx.moveTo(startX, startY);
                 ctx.lineTo(endX, endY);
-                ctx.lineWidth = Math.random() * 70 + 50;
+
+                // Dynamic Beam Width Based on Screen Size
+                let beamWidth =
+                    screenWidth >= 1400
+                        ? maxBeamWidth
+                        : screenWidth >= 1000
+                            ? baseWidth
+                            : minBeamWidth;
+
+                ctx.lineWidth = Math.random() * beamWidth + 20;
                 ctx.strokeStyle = gradient;
                 ctx.stroke();
             }
         };
 
-      
         function animate() {
-            // ctx.clearRect(0, 0, canvas.width, canvas.height);
-            // drawBeams();
             drawParticles();
-            // setTimeout(() => requestAnimationFrame(animate), 12);
         }
+
         resizeCanvas();
-
         animate();
-
         window.addEventListener("resize", resizeCanvas);
+
+        return () => {
+            window.removeEventListener("resize", resizeCanvas);
+        };
     }, []);
 
     return <canvas ref={canvasRef} className="light-beam-effect"></canvas>;
 };
 
 export default LightBeamEffect;
-// //

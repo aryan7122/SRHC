@@ -25,7 +25,7 @@ const HeroSection = () => {
         // Doctor Image Slide-In
         tl.fromTo(
             doctorRef.current,
-            { y: 300, opacity: 0,scale:0 }, 
+            { y: 300, opacity: 0, scale: 0 },
             { y: 0, opacity: 1, scale: 1, duration: 1, ease: "power2.out" }
         );
 
@@ -62,7 +62,7 @@ const HeroSection = () => {
                     );
                 });
             });
-            });
+        });
 
         // Mobile Images Animation (Slide from Top)
         gsap.fromTo(
@@ -81,7 +81,7 @@ const HeroSection = () => {
     return (
         <div className="hero-section">
             <LightBeamEffect />
-             <Smoke />
+            <Smoke />
             <div className="hero-content">
                 <div className="text-container">
                     <img
@@ -90,7 +90,9 @@ const HeroSection = () => {
                         alt="Doctor"
                         className="doctor-img"
                     />
-                    <h1 ref={textRef} data-text="Your Healthcare,  "></h1>
+                    <h1 ref={textRef} className="outline-text" data-text="Your Healthcare ">
+                    </h1>
+
                     <h1 ref={textRef2} className="highlight" data-text="Simplified!"></h1>
                     <p
                         ref={subTextRef}
@@ -118,7 +120,7 @@ const HeroSection = () => {
                     />
                 </div>
             </div>
-            {/* <SmokeEffect /> */}
+            <SmokeEffect />
         </div>
     );
 };

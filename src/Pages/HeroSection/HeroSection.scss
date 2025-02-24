@@ -1,10 +1,74 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes lineMove {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 .hero-section {
-  background: url("../../assets/Hero/group-bg.png") no-repeat center
-    center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(-45deg, #211212, #130c47, #000728, #1b0045);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite, fadeIn 1.5s ease-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.257) 0px,
+        rgba(255, 255, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 90px
+      ),
+      linear-gradient(to right, #000728 10%, #130c47 20%);
+    background-size: 92px, 100%;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fadeIn 1.5s ease-out, lineMove 100s linear infinite;
+  }
+
+  // background: url("") no-repeat center
+  //   center/cover;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 780px;
+  height: 774px;
   // overflow: hidden;
   // position: relative;
   padding: 0 10%;
@@ -26,14 +90,14 @@
     width: 100%;
     // max-width: 1300px;
     position: relative;
-    
+
     .text-container {
       height: 700px;
       margin-bottom: -380px;
       //   position: absolute;
       padding: 10px;
       width: 80%;
-      margin-left: -60px;
+      margin-left: -80px;
       z-index: 2;
       position: relative;
       h1 {
@@ -43,9 +107,18 @@
         color: white;
         line-height: 1.2;
         mix-blend-mode: difference;
+        // color: transparent !important;
+        // -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3) !important;
+        @media only screen and (max-width: 1300px) {
+          font-size: 60px;
+          font-weight: 900;
+          color: white;
+          line-height: 1.1;
+        }
       }
+     
       .highlight {
-        color: #00FFEA;
+        color: #00ffea;
       }
 
       p {
@@ -60,11 +133,17 @@
       .doctor-img {
         // border: 1px solid red;
         position: absolute;
+        border: 1px solid red;
         top: 26px;
         left: 285px;
         height: 521px;
         z-index: -1;
         mix-blend-mode: multiply;
+
+        @media only screen and (max-width: 1300px) {
+          left: 240px;
+          height: 521px;
+        }
       }
       .buttons {
         margin-top: 40px;
@@ -133,15 +212,22 @@
       width: 45%;
       height: 800px;
       position: relative;
-      
+      @media only screen and (max-width: 1500px) {
+        margin-right: -50px;
+        border: 1px solid red;
+      }
+      @media only screen and (max-width: 1400px) {
+        margin-right: -70px;
+        border: 1px solid red;
+      }
       .left-mobile {
         position: absolute;
-        left: -320px ;
+        left: -320px;
         height: 600px;
         z-index: 1;
         bottom: -90px;
       }
-      
+
       .right-mobile {
         position: absolute;
         right: -50px;
@@ -150,7 +236,6 @@
         z-index: 3;
       }
     }
-    
   }
 }
 

@@ -25,11 +25,11 @@ const SmokeEffect = () => {
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-                this.opacity -= 0.002;
+                this.opacity -= 0.001;
                 if (this.opacity <= 0) {
                     this.x = Math.random() * canvas.width;
                     this.y = canvas.height;
-                    this.opacity = Math.random() * 0.5 + 0.2;
+                    this.opacity = Math.random() * 0.1 + 0.2;
                 }
             }
 
@@ -44,7 +44,7 @@ const SmokeEffect = () => {
         function initParticles() {
             particles = [];
             for (let i = 0; i < 100; i++) {
-                let size = Math.random() * 5 + 2;
+                let size = Math.random() * 1 + 2;
                 let x = Math.random() * canvas.width;
                 let y = Math.random() * canvas.height;
                 let speedX = (Math.random() - 0.5) * 0.5;

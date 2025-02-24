@@ -2,7 +2,9 @@
   text-align: center;
   padding: 60px;
   background: #eaf7f2; // Light Greenish background
-
+  @media only screen and (max-width: 1400px) {
+    padding: 40px;
+  }
   .heading {
     font-weight: 700;
     font-size: 48px;
@@ -185,7 +187,7 @@
     margin-top: 330px;
     gap: 2rem;
     width: 100%;
-   
+
     .step-card {
       background: #fff;
       border-radius: 15px;
@@ -197,11 +199,12 @@
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
       height: 190px;
       transition: transform 0.3s ease-in-out;
-       border: 1px solid rgba(132, 131, 131, 0.361);
+      border: 1px solid rgba(132, 131, 131, 0.361);
       position: relative;
       &:hover {
         transform: translateY(-5px);
       }
+     
 
       .step-img {
         position: absolute;
