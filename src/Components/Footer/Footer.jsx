@@ -11,11 +11,12 @@ const Footer = () => {
                         alt="SR Healthcare Community" />
                 </div>
                 <nav className="footer-nav">
-                    <a href="#features">Features</a>
+                    <a href="#Features">Features</a>
                     <a href="#pricing">Pricing</a>
-                    <a href="#how-it-works">How it works</a>
+                    <a href="#how-it-work">How it works</a>
                     <a href="#about">About</a>
                 </nav>
+               
                 <div className="social-icons">
                     <a href="#" className="icon"><Twitter size={20} /></a>
                     <a href="#" className="icon"><Facebook size={20} /></a>
@@ -23,7 +24,14 @@ const Footer = () => {
                     <a href="#" className="icon"><Github size={20} /></a>
                 </div>
             </div>
+            <nav className="footer-nav">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#about">About</a>
+            </nav>
             <div className="footer-bottom">
+                
                 <p> &copy; Copyright 2025. All Rights Reserved by SR Healthcare Community</p>
                 <div
                     className="buttons2"
