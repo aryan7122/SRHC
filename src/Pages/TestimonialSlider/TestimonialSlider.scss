@@ -43,12 +43,17 @@
   // max-width: 800px;
   margin: auto;
   overflow: hidden;
+ 
+  
 }
 .testimonial-container {
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 20px;
+  @media only screen and (max-width: 780px) {
+    gap: 0px;
+  }
 }
 
 .testimonial-card {
@@ -70,6 +75,16 @@
     width: 360px;
     height: 330px;
   }
+        @media only screen and (max-width: 780px) {
+          width: 340px;
+          height: 350px;
+        }
+        @media only screen and (max-width: 360px) {
+          width: 300px;
+          height: 380px;
+          padding: 10px;
+        }
+        
   .stars {
     width: 20px;
     color: #ffcc00;
@@ -116,6 +131,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+    @media only screen and (max-width: 500px) {
+      padding: 20px;
+    }
   .dots {
     display: flex;
     justify-content: center;
@@ -320,6 +338,42 @@
   @media only screen and (max-width: 860px) {
     transform: translateX(calc(-13% * var(--index)));
     margin-left: 800px;
+  }
+  @media only screen and (max-width: 770px) {
+    transform: translateX(calc(-14% * var(--index)));
+    margin-left: 800px;
+  }
+  @media only screen and (max-width: 625px) {
+    transform: translateX(calc(-11%* var(--index)));
+    margin-left: 100px;
+  }
+  @media only screen and (max-width: 610px) {
+    transform: translateX(calc(-11%* var(--index)));
+    margin-left: 140px;
+  }
+  @media only screen and (max-width: 569px) {
+    transform: translateX(calc(-11%* var(--index)));
+    margin-left: 190px;
+  }
+  @media only screen and (max-width: 523px) {
+    transform: translateX(calc(-11.5%* var(--index)));
+    margin-left: 230px;
+  }
+  @media only screen and (max-width: 481px) {
+    transform: translateX(calc(-12%* var(--index)));
+    margin-left: 260px;
+  }
+  @media only screen and (max-width: 445px) {
+    transform: translateX(calc(-12%* var(--index)));
+    margin-left: 300px;
+  }
+  @media only screen and (max-width: 411px) {
+    transform: translateX(calc(-12.4%* var(--index)));
+    margin-left: 340px;
+  }
+  @media only screen and (max-width: 366px) {
+    transform: translateX(calc(-12.8%* var(--index)));
+    margin-left: 320px;
   }
 }
 

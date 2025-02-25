@@ -145,7 +145,7 @@
     backdrop-filter: blur(124px);
     -webkit-backdrop-filter: blur(24px);
     padding: 11px 20px;
-    border-radius: 100px;
+    // border-radius: 100px;
     li {
       a {
         // border: 1px solid red;
@@ -204,6 +204,9 @@
       transition: all 0.3s ease-in-out;
       position: relative;
       overflow: hidden;
+        @media only screen and (max-width: 950px) {
+          display: none;
+        }
     }
 
     .Download-button::before {
@@ -325,10 +328,10 @@
 
 .menu-active-navbar-container {
   @media (max-width: 950px) {
-    border-top-left-radius: 40px !important;
-    border-top-right-radius: 40px !important;
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
+    // border-top-left-radius: 40px !important;
+    // border-top-right-radius: 40px !important;
+    // border-bottom-left-radius: 0px !important;
+    // border-bottom-right-radius: 0px !important;
     transition: 0.2s linear;
   }
 
