@@ -80,14 +80,18 @@
       display: flex;
       gap: 15px;
       @media only screen and (max-width: 856px) {
-          margin-top: 20px;
+        margin-top: 20px;
+      }
+      @media only screen and (max-width: 340px) {
+       scale: 0.8;
+       margin-left: -20px;
+      }
+      p {
+        margin-top: 13px;
+        margin-right: 10px;
+        @media only screen and (max-width: 435px) {
+          display: none;
         }
-        p {
-            margin-top: 13px;
-            margin-right: 10px;
-            @media only screen and (max-width: 435px) {
-                display: none;
-            }
       }
       img {
         opacity: 1 !important;

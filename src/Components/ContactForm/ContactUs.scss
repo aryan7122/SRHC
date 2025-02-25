@@ -7,6 +7,12 @@
   @media only screen and (max-width: 1400px) {
     padding: 40px;
   }
+  @media only screen and (max-width: 1000px) {
+    padding: 40px 30px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 20px;
+  }
   @media only screen and (max-width: 1211px) {
     flex-direction: column;
   }
@@ -43,6 +49,14 @@
       @media only screen and (max-width: 1324px) {
         width: 100%;
       }
+      @media only screen and (max-width: 900px) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+      @media only screen and (max-width: 500px) {
+        font-size: 37px;
+        line-height: 42px;
+      }
     }
 
     .description {
@@ -59,6 +73,10 @@
       @media only screen and (max-width: 1211px) {
         display: flex;
         gap: 10px;
+      }
+      @media only screen and (max-width: 900px) {
+        flex-direction: column;
+        gap: 0px;
       }
       p {
         display: flex;
@@ -100,6 +118,10 @@
         object-position: 10% 15%;
         //  height: 300px;
       }
+ @media only screen and (max-width: 400px) {
+    object-position: 39% 15%;
+    height: 300px;
+ }
     }
   }
 
@@ -109,7 +131,7 @@
     padding: 30px;
     border-radius: 10px;
     // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  @media only screen and (max-width: 1211px) {
+    @media only screen and (max-width: 1211px) {
       width: 100%;
     }
     form {
@@ -120,6 +142,12 @@
       .form-row {
         display: flex;
         gap: 10px;
+                    @media only screen and (max-width: 440px) {
+                      flex-direction: column;
+                    }
+      }
+      @media only screen and (max-width: 570px) {
+        width: 90vw;
       }
 
       .form-group {
@@ -154,9 +182,24 @@
             border: 1px solid #02cbf8;
             box-shadow: 0px 0px 4px 0.1px #02f8d7;
           }
-                        @media only screen and (max-width: 1211px) {
-                          width: 400px;
-                        }
+          @media only screen and (max-width: 1211px) {
+            width: 400px;
+          }
+          @media only screen and (max-width: 880px) {
+            width: 350px;
+          }
+          @media only screen and (max-width: 770px) {
+            width: 300px;
+          }
+          @media only screen and (max-width: 670px) {
+            width: 280px;
+          }
+          @media only screen and (max-width: 630px) {
+            width: 250px;
+          }
+          @media only screen and (max-width: 570px) {
+            width: 100%;
+          }
         }
 
         textarea {
