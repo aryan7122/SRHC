@@ -2,12 +2,24 @@
   text-align: center;
   padding: 60px;
   background: linear-gradient(135deg, #f5e9f8, #f0c3fc, #c8e1ff);
-
+  @media only screen and (max-width: 1400px) {
+    padding: 40px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 40px 30px;
+  }
+    @media only screen and (max-width: 600px) {
+      padding: 40px 20px;
+    }
   .pricing-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    @media only screen and (max-width: 860px) {
+      flex-direction: column;
+      align-items: start;
+    }
     h2 {
       font-weight: 700;
       font-size: 48px;
@@ -15,6 +27,14 @@
       letter-spacing: -0.8px;
       text-align: start;
       color: #0a4d3c;
+          @media only screen and (max-width: 490px) {
+            font-size: 40px;
+            line-height: 45px;
+          }
+          @media only screen and (max-width: 400px) {
+            font-size: 36px;
+            line-height: 40px;
+          }
     }
 
     p {
@@ -22,9 +42,19 @@
       font-size: 21.6px;
       line-height: 33.6px;
       letter-spacing: 0px;
-      text-align: center;
+      text-align: left;
       color: #555;
       margin: 0.5rem 0 1rem;
+      @media only screen and (max-width: 975px) {
+        width: 80%;
+      }
+      @media only screen and (max-width: 860px) {
+        width: 100%;
+      }
+             @media only screen and (max-width: 400px) {
+               font-size: 18px;
+               line-height: 22px;
+             }
     }
 
     //
@@ -127,7 +157,9 @@
     justify-content: start;
     margin: 1.5rem 0;
     gap: 0rem;
-
+    @media only screen and (max-width: 860px) {
+      margin-top: 50px;
+    }
     button {
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
@@ -176,9 +208,9 @@
     // background: #000;
     color: #7f72e5;
     &.active {
-        background: #7f72e5;
-        color: white;
-      }
+      background: #7f72e5;
+      color: white;
+    }
     transform: translateY(-0.1px);
     /* Slight hover lift */
   }
@@ -189,7 +221,12 @@
     flex-wrap: wrap;
     margin-top: 60px;
     gap: 30px;
-
+    @media only screen and (max-width: 800px) {
+      gap: 10px;
+    }
+    @media only screen and (max-width: 680px) {
+      grid-template-columns: 1fr;
+    }
     .plan-card {
       background: white;
       border-radius: 15px;
@@ -199,7 +236,9 @@
       width: 100%;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out;
-
+          @media only screen and (max-width: 490px) {
+            padding: 20px;
+          }
       &:hover {
         transform: translateY(-1px);
       }
@@ -213,6 +252,10 @@
         font-size: 20px;
         line-height: 30px;
         letter-spacing: -0.2px;
+        @media only screen and (max-width: 400px) {
+            font-size: 18px;
+            line-height: 22px;
+          }
       }
       .price {
         margin-top: 15px;
@@ -253,9 +296,12 @@
         letter-spacing: 0px;
         color: #0d0d0db2;
         margin: 1rem 0;
+        border-bottom: 1px solid #b3b3b3;
+        padding-bottom: 20px;
       }
 
       .plan-features {
+        //  padding-top: 30px;
         list-style: none;
         padding: 0;
         margin: 1rem 0;
@@ -267,17 +313,20 @@
           letter-spacing: -0.5px;
           color: #222;
           text-align: left;
-          margin: 1rem 0;
+          margin: 30px 0;
           display: flex;
           align-items: center;
           gap: 10px;
-          .round{
+          @media only screen and (max-width: 490px) {
+            font-size: 20px;
+          }
+          .round {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 3px;
-            border: 1px solid #85EFAC;
-            color: #589E67;
+            border: 1px solid #85efac;
+            color: #589e67;
             border-radius: 100%;
           }
         }

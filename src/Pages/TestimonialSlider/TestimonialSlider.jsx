@@ -47,17 +47,17 @@ const testimonials = [
 
 const TestimonialSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const cardsPerSlide = 3;
+    const cardsPerSlide = 1; // Show 3.5 cards
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex + 1 < testimonials.length - (cardsPerSlide - 1) ? prevIndex + 1 : 0
+            prevIndex + 1 >= testimonials.length ? 0 : prevIndex + 1
         );
     };
 
     const prevSlide = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? testimonials.length - (cardsPerSlide - 1) : prevIndex - 1
+            prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
         );
     };
 
@@ -67,23 +67,21 @@ const TestimonialSlider = () => {
                 <div>
                     <h2>What Our Users Say</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
+                </div>
                 <button className="Download-button">
                     Download now
                     <ArrowDownToLine className="arrow-icon" size={20} strokeWidth={3} />
                 </button>
             </div>
-            <div className="testimonial-slider">
 
-                <div className="testimonial-container">
-                    {testimonials.slice(currentIndex, currentIndex + cardsPerSlide).map((testimonial, index) => (
+            {/* Slider Section */}
+            <div className="testimonial-slider">
+                <div className="testimonial-container" style={{ "--index": currentIndex }}>
+                    {testimonials.concat(testimonials.slice(0, 3)).map((testimonial, index) => (
                         <div className="testimonial-card" key={index}>
                             <div className="stars">
                                 {[...Array(5)].map((_, i) => (
-                                    <span
-                                        key={i}
-                                        style={{ opacity: i < testimonial.rating ? 1 : 0.3 }}
-                                    >
+                                    <span key={i} style={{ opacity: i < testimonial.rating ? 1 : 0.3 }}>
                                         ⭐
                                     </span>
                                 ))}
@@ -99,16 +97,16 @@ const TestimonialSlider = () => {
                         </div>
                     ))}
                 </div>
-
             </div>
-            <div className="actionSlider">
 
+            {/* Slider Controls */}
+            <div className="actionSlider">
                 <div className="dots">
-                    {testimonials.map((_, index) => (
+                    {[...Array(Math.ceil(testimonials.length / cardsPerSlide))].map((_, index) => (
                         <span
                             key={index}
-                            className={index === currentIndex ? "dot active" : "dot"}
-                            onClick={() => setCurrentIndex(index)}
+                            className={index === Math.floor(currentIndex / cardsPerSlide) ? "dot active" : "dot"}
+                            onClick={() => setCurrentIndex(index * cardsPerSlide)}
                         ></span>
                     ))}
                 </div>
@@ -121,10 +119,8 @@ const TestimonialSlider = () => {
                     </button>
                 </div>
             </div>
-           
         </div>
     );
 };
 
 export default TestimonialSlider;
-// 

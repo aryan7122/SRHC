@@ -1,14 +1,26 @@
 .testimonial-section {
   text-align: center;
   background: linear-gradient(to right, #f8e8ff, #e6f7ff);
-
+  overflow: hidden;
   border-radius: 10px;
   .top-title01 {
     padding: 60px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: start;
+    @media only screen and (max-width: 1400px) {
+      padding: 40px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      padding: 40px 30px;
+    }
+    @media only screen and (max-width: 578px) {
+      flex-direction: column;
+      align-items: start;
+    }
     h2 {
       color: #1d3c34;
       font-size: 28px;
@@ -52,12 +64,12 @@
   transition: all 0.3s ease;
   @media only screen and (max-width: 1400px) {
     width: 400px;
-      height: 310px;
-    }
+    height: 310px;
+  }
   @media only screen and (max-width: 1340px) {
     width: 360px;
-      height: 330px;
-    }
+    height: 330px;
+  }
   .stars {
     width: 20px;
     color: #ffcc00;
@@ -108,7 +120,7 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
-  
+
     .dot {
       width: 10px;
       height: 10px;
@@ -117,7 +129,7 @@
       margin: 0 5px;
       cursor: pointer;
       transition: background 0.3s;
-  
+
       &.active {
         background: #555;
       }
@@ -125,29 +137,29 @@
   }
   .prev-btn,
   .next-btn {
-      background: none;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-      color: #555;
-      border: 1px solid #231877;
-      width: 48px;
-      height: 48px;
-      border-radius: 100px;
-      background: #fff;
-      :active{
-        color: #231877;
-      }
-      // position: absolute;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+    border: 1px solid #231877;
+    width: 48px;
+    height: 48px;
+    border-radius: 100px;
+    background: #fff;
+    :active {
+      color: #231877;
+    }
+    // position: absolute;
   }
 
   .prev-btn {
-      left: 10;
-      margin-right: 20px;
+    left: 10;
+    margin-right: 20px;
   }
 
   .next-btn {
-      right: 10px;
+    right: 10px;
   }
 }
 
@@ -264,4 +276,58 @@
   .testimonial-container {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.testimonial-slider {
+  // width: 100%;
+  overflow: hidden;
+}
+
+.testimonial-container {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  // width: calc(100% * 5 / 4);
+  margin-left: 440px;
+  transform: translateX(calc(-12.5% * var(--index)));
+  @media only screen and (max-width: 1331px) {
+    transform: translateX(calc(-10% * var(--index)));
+    margin-left: 300px;
+  }
+  @media only screen and (max-width: 1273px) {
+    transform: translateX(calc(-10% * var(--index)));
+    margin-left: 350px;
+  }
+  @media only screen and (max-width: 1223px) {
+    transform: translateX(calc(-10% * var(--index)));
+    margin-left: 400px;
+  }
+  @media only screen and (max-width: 1123px) {
+    transform: translateX(calc(-11% * var(--index)));
+    margin-left: 500px;
+  }
+  @media only screen and (max-width: 1070px) {
+    transform: translateX(calc(-11% * var(--index)));
+    margin-left: 600px;
+  }
+  @media only screen and (max-width: 980px) {
+    transform: translateX(calc(-12% * var(--index)));
+    margin-left: 660px;
+  }
+  @media only screen and (max-width: 910px) {
+    transform: translateX(calc(-12% * var(--index)));
+    margin-left: 720px;
+  }
+  @media only screen and (max-width: 860px) {
+    transform: translateX(calc(-13% * var(--index)));
+    margin-left: 800px;
+  }
+}
+
+.testimonial-card {
+  // flex: 1 0 calc(100% / 4);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin: 10px;
 }

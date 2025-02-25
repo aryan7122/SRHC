@@ -2,8 +2,15 @@
   text-align: center;
   padding: 60px;
   background: #eaf7f2; // Light Greenish background
+  overflow-x: hidden !important;
   @media only screen and (max-width: 1400px) {
     padding: 40px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 40px 30px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 20px;
   }
   .heading {
     font-weight: 700;
@@ -11,7 +18,18 @@
     line-height: 57.6px;
     letter-spacing: -2.2px;
     color: #2b2a2a;
-
+    @media only screen and (max-width: 470px) {
+      font-size: 40px;
+      line-height: 44px;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+    @media only screen and (max-width: 350px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
     span {
       color: #0d0d0d;
     }
@@ -31,7 +49,10 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-
+    @media only screen and (max-width: 410px) {
+      flex-direction: column;
+      align-items: center;
+    }
     .contact-btn {
       width: 182px;
       height: 50px;
@@ -187,9 +208,15 @@
     margin-top: 330px;
     gap: 2rem;
     width: 100%;
- @media only screen and (max-width: 1360px) {
+    @media only screen and (max-width: 1360px) {
       gap: 10px;
-      }
+    }
+    @media only screen and (max-width: 1132px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
     .step-card {
       background: #fff;
       border-radius: 15px;
@@ -203,10 +230,26 @@
       transition: transform 0.3s ease-in-out;
       border: 1px solid rgba(132, 131, 131, 0.361);
       position: relative;
+      transition: 0.3s ease-out;
       &:hover {
-        transform: translateY(-5px);
+        border: 1px solid #047bfbee;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(4, 123, 251, 0.2);
+
+        .step-img {
+          transform: translateY(-5px) scale(1.05);
+          transition: transform 0.3s ease-in-out;
+        }
+        .step-info {
+          .step-number {
+            span {
+              transition: transform 0.3s ease-in-out;
+              font-size: 22px;
+              color: #000000dc;
+            }
+          }
+        }
       }
-     
 
       .step-img {
         position: absolute;
@@ -242,11 +285,79 @@
         letter-spacing: -2.5%;
         color: #0d654e;
         @media only screen and (max-width: 1297px) {
-            font-size: 22px;
-          }
+          font-size: 22px;
+        }
         @media only screen and (max-width: 1211px) {
-            font-size: 20px;
-          }
+          font-size: 20px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1132px) {
+      .step-card:nth-child(1) {
+        .step-img {
+          // border: 1px solid red !important;
+          margin-left: -50%;
+          margin-bottom: 350px;
+        }
+      }
+      .step-card:nth-child(2) {
+        @media only screen and (max-width: 500px) {
+          margin-top: 300px;
+        }
+        .step-img {
+          // border: 1px solid red !important;
+          margin-left: -50%;
+          margin-bottom: 350px;
+        }
+      }
+      .step-card:nth-child(3) {
+        .step-img {
+          // border: 1px solid red !important;
+          margin-left: 50%;
+          margin-bottom: 200px;
+        }
+      }
+      .step-card:nth-child(4) {
+        .step-img {
+          // border: 1px solid red !important;
+          margin-left: 50%;
+          margin-bottom: 200px;
+        }
+      }
+    }
+    @media only screen and (max-width: 930px) {
+      .step-card:nth-child(1) {
+        .step-img {
+          // border: 1px solid red !important;
+          margin-left: 0%;
+          margin-bottom: 350px;
+        }
+      }
+
+      .step-card:nth-child(2) {
+        .step-img {
+          // border: 1px solid red !important;
+          margin-left: 0%;
+          margin-bottom: 350px;
+        }
+      }
+
+      .step-card:nth-child(3) {
+        margin-top: 300px;
+        .step-img {
+          // border: 1px solid red !important;
+          margin-left: 0%;
+          margin-bottom: 350px;
+        }
+      }
+
+      .step-card:nth-child(4) {
+        margin-top: 300px;
+        .step-img {
+          // border: 1px solid red !important;
+          margin-left: 0%;
+          margin-bottom: 350px;
+        }
       }
     }
   }

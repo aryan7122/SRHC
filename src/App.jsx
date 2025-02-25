@@ -17,7 +17,7 @@ import ContactUs from "./Components/ContactForm/ContactUs";
 
 function App() {
   return (
-    <>
+    <div className="app">
       <Router>
         <Navbar />
         <Routes>
@@ -52,7 +52,7 @@ function App() {
         </Routes>
         {/* <Footer /> */}
       </Router>
-    </>
+    </div>
   );
 }
 

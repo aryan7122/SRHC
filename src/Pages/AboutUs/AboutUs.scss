@@ -2,17 +2,46 @@
   display: flex;
   align-items: start;
   justify-content: space-between;
-  padding: 50px;
+  padding: 60px;
   background-color: #f9f9f9;
+  margin-top: 40px;
   padding-top: 100px;
+  @media only screen and (max-width: 1400px) {
+    padding: 60px 40px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 60px 30px;
+  }
+  @media only screen and (max-width: 850px) {
+    margin-top: 0px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 20px;
+  }
+  
   .content {
     width: 600px;
-            @media only screen and (max-width: 1350px) {
-              width: 550px;
-            }
-            @media only screen and (max-width: 1230px) {
-              width: 500px;
-            }
+    @media only screen and (max-width: 1350px) {
+      width: 550px;
+    }
+    @media only screen and (max-width: 1230px) {
+      width: 500px;
+    }
+    @media only screen and (max-width: 1111px) {
+      width: 450px;
+    }
+    @media only screen and (max-width: 1021px) {
+      width: 420px;
+    }
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      margin-right: 20px;
+    }
+    @media only screen and (max-width: 850px) {
+      width: 100%;
+      margin-right: 0px;
+     
+    }
     .tag {
       display: inline-block;
       background: #b8b8b81a;
@@ -32,6 +61,32 @@
       line-height: 57.6px;
       letter-spacing: -2.2px;
       color: #2b2a2a;
+      @media only screen and (max-width: 900px) {
+        font-size: 40px;
+        line-height: 42px;
+        margin-top: 10px;
+      }
+      @media only screen and (max-width: 600px) {
+        font-size: 36px;
+        line-height: 40px;
+        margin-top: 10px;
+      }
+    }
+    .img_ab {
+      display: none;
+      @media only screen and (max-width: 850px) {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 18px;
+        object-fit: cover;
+        object-position: 1% 30%;
+        height: 350px;
+
+      }
+      @media only screen and (max-width: 500px) {
+        height: 250px;
+      }
     }
 
     p {
@@ -43,11 +98,10 @@
       color: #55545d;
     }
 
-    
     .contact-btn {
       width: 252px;
       height: 54px;
-            margin-top: 70px;
+      margin-top: 70px;
       padding: 8px 20px;
       border-radius: 12px;
       display: flex;
@@ -55,7 +109,7 @@
       justify-content: center;
       outline: none;
       border: 2px solid #fff;
-      background: #6656E0;
+      background: #6656e0;
       color: #fff;
       cursor: pointer;
       font-size: 16px;
@@ -65,10 +119,10 @@
       transition: all 0.3s ease-in-out;
       position: relative;
       overflow: hidden;
-        &:active {
-            scale: 0.95;
-            transition: 0.3s linear;
-          }
+      &:active {
+        scale: 0.95;
+        transition: 0.3s linear;
+      }
     }
 
     .contact-btn::before {
@@ -96,7 +150,9 @@
 
   .image-container {
     max-width: 50%;
-
+    @media only screen and (max-width: 850px) {
+      display: none;
+    }
     img {
       width: 100%;
       height: 600px;

@@ -1,14 +1,20 @@
 .healthcare-containers {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 700px;
   background: linear-gradient(169.08deg, #221868 41.46%, #040023 104.06%);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  overflow: hidden;
+  @media only screen and (max-width: 1100px) {
+    height: 650px;
+  }
+  @media only screen and (max-width: 900px) {
+    height: 550px;
+  }
   .background-text {
     position: absolute;
     top: 0;
@@ -92,21 +98,26 @@
 
   .content-healthcare {
     padding: 60px;
-    @media only screen and (max-width: 1400px) {
-        padding: 40px;
-      }
     position: relative;
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    @media only screen and (max-width: 1400px) {
+      padding: 40px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding: 40px 30px;
+    }
     // color: white;
   }
 
   .text-section {
     max-width: 42%;
-
+    @media only screen and (max-width: 900px) {
+      max-width: 100%;
+    }
     h2 {
       font-size: 2rem;
       background: linear-gradient(
@@ -120,6 +131,14 @@
       font-size: 36px;
       line-height: 44px;
       letter-spacing: -0.5px;
+      @media only screen and (max-width: 444px) {
+          font-size: 30px;
+          line-height: 40px;
+        }
+      @media only screen and (max-width: 400px) {
+          font-size: 26px;
+          line-height: 32px;
+        }
       span {
         font-weight: bold;
       }
@@ -129,6 +148,10 @@
       margin-top: 40px;
       display: flex;
       gap: 15px;
+      @media only screen and (max-width: 350px) {
+         flex-direction: column;
+         align-items: center;
+        }
       img {
         opacity: 1 !important;
         border: 1px solid rgb(255, 255, 255);
@@ -192,16 +215,28 @@
   }
   .image-section {
     // position: relative;
-
+    @media only screen and (max-width: 1235px) {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    @media only screen and (max-width: 900px) {
+      display: none !important;
+    }
     img {
-    //   width: 200px;
-    width: 60%;
-    @media only screen and (max-width: 1500px) {
+      //   width: 200px;
+      width: 60%;
+      @media only screen and (max-width: 1500px) {
         width: 65%;
       }
-    @media only screen and (max-width: 1500px) {
+      @media only screen and (max-width: 1500px) {
         width: 69%;
         margin-right: -20px;
+      }
+      @media only screen and (max-width: 1270px) {
+        // width: 60%;
+        // margin-top: -200px;
+        margin-right: -40px;
       }
     }
 
@@ -210,6 +245,36 @@
       top: -200px;
 
       right: -50px;
+      @media only screen and (max-width: 1270px) {
+        right: 0;
+        top: -150px;
+      }
+      @media only screen and (max-width: 1170px) {
+        right: -30px;
+        top: -130px;
+      }
+      @media only screen and (max-width: 1100px) {
+        right: -30px;
+        top: -120px;
+      }
+      @media only screen and (max-width: 1050px) {
+        right: -30px;
+        top: -100px;
+      }
+      @media only screen and (max-width: 1100px) {
+        right: -30px;
+        top: -80px;
+      }
+      @media only screen and (max-width: 980px) {
+        right: -30px;
+        top: -50px;
+        scrollbar-width: 0.9;
+      }
+      @media only screen and (max-width: 930px) {
+        right: -30px;
+        top: -30px;
+        scrollbar-width: 0.9;
+      }
     }
   }
 }

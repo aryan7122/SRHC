@@ -3,6 +3,8 @@ import "./HealthcareCommunity.scss";
 import appStore from "../../assets/Hero/appstore.png";
 import playStore from "../../assets/Hero/playstore.png";
 import phone from '../../assets/HC/HC.png'
+import { motion } from "framer-motion";
+
 const HealthcareCommunity = () => {
     return (
         <div className="healthcare-containers">
@@ -52,24 +54,61 @@ const HealthcareCommunity = () => {
                     </div>
                 ))}
             </div>
-            <div className="content-healthcare">
-                <div className="text-section">
+            <motion.div
+                className="content-healthcare"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+            >
+                <motion.div
+                    className="text-section"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
                     <h2>
                         Join the <span>thousands</span> of users who have already discovered
                         the best local experiences with our healthcare community App.
                         Download now and start exploring today!
                     </h2>
-                    <div
+
+                    <motion.div
                         className="buttons2"
-                        style={{ display: "flex", gap: "10px", }}>
-                        <img src={appStore} alt="App Store" />
-                        <img src={playStore} alt="Google Play" />
-                    </div>
-                </div>
-                <div className="image-section">
-                    <img src={phone} alt="Healthcare App" className="phone" />
-                </div>
-            </div>
+                        style={{ display: "flex", gap: "10px" }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                    >
+                        <motion.img
+                            src={appStore}
+                            alt="App Store"
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                        />
+                        <motion.img
+                            src={playStore}
+                            alt="Google Play"
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                        />
+                    </motion.div>
+                </motion.div>
+
+                <motion.div
+                    className="image-section"
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    <motion.img
+                        src={phone}
+                        alt="Healthcare App"
+                        className="phone"
+                      
+                    />
+                </motion.div>
+            </motion.div>
         </div>
     );
 };

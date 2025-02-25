@@ -1,12 +1,10 @@
 @keyframes fadeIn {
   0% {
-    opacity: 0;
-    transform: scale(1.05);
+    opacity: 0.5;
   }
 
   100% {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -36,12 +34,12 @@
 
 .hero-section {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   position: relative;
   background: linear-gradient(-45deg, #211212, #130c47, #000728, #1b0045);
   background-size: 400% 400%;
   animation: gradientMove 8s ease infinite, fadeIn 1.5s ease-out;
-
+  // overflow-x: hidden;
   &::before {
     content: "";
     position: absolute;
@@ -73,6 +71,13 @@
   // position: relative;
   padding: 0 10%;
   margin-top: -80px;
+  @media only screen and (max-width: 1300px) {
+    height: 700px;
+  }
+  @media only screen and (max-width: 730px) {
+    padding: 0 3%;
+  }
+
   @keyframes bounceEffect {
     0%,
     100% {
@@ -81,6 +86,11 @@
 
     50% {
       position: static;
+    }
+  }
+  .smoke_ef {
+    @media only screen and (max-width: 660px) {
+      display: none !important;
     }
   }
   .hero-content {
@@ -100,6 +110,23 @@
       margin-left: -80px;
       z-index: 2;
       position: relative;
+      @media only screen and (max-width: 1300px) {
+        margin-bottom: -460px;
+      }
+      @media only screen and (max-width: 855px) {
+        margin-left: 0;
+      }
+      @media only screen and (max-width: 660px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: -70px !important;
+        margin: 0 auto;
+        width: 100%;
+
+        // margin-left: 20%;
+      }
       h1 {
         width: 600px;
         font-size: 70px;
@@ -115,8 +142,15 @@
           color: white;
           line-height: 1.1;
         }
+        @media only screen and (max-width: 660px) {
+          width: 100%;
+          text-align: center;
+        }
+        @media only screen and (max-width: 500px) {
+          font-size: 50px;
+        }
       }
-     
+
       .highlight {
         color: #00ffea;
       }
@@ -129,6 +163,10 @@
         color: #ddd;
         margin: 15px 0 20px;
         mix-blend-mode: difference;
+        @media only screen and (max-width: 420px) {
+          width: 100%;
+          text-align: center;
+        }
       }
       .doctor-img {
         // border: 1px solid red;
@@ -141,15 +179,22 @@
         mix-blend-mode: multiply;
 
         @media only screen and (max-width: 1300px) {
-          left: 240px;
-          height: 521px;
+          left: 290px;
+          top: 20px;
+          height: 450px;
+        }
+        @media only screen and (max-width: 660px) {
+          display: none;
         }
       }
       .buttons {
         margin-top: 40px;
         display: flex;
         gap: 15px;
-
+        @media only screen and (max-width: 350px) {
+          flex-direction: column;
+          align-items: center;
+        }
         img {
           border: 1px solid rgb(255, 255, 255);
           border-radius: 8px;
@@ -212,20 +257,34 @@
       width: 45%;
       height: 800px;
       position: relative;
+      @media only screen and (max-width: 855px) {
+        // right: 0px;
+        display: none;
+      }
       @media only screen and (max-width: 1500px) {
         margin-right: -50px;
         // border: 1px solid red;
       }
       @media only screen and (max-width: 1400px) {
         margin-right: -70px;
-        // border: 1px solid red;
       }
+      @media only screen and (max-width: 1300px) {
+        height: 700px;
+      }
+
       .left-mobile {
         position: absolute;
         left: -320px;
         height: 600px;
         z-index: 1;
         bottom: -90px;
+        @media only screen and (max-width: 1300px) {
+          height: 500px;
+          left: -240px;
+        }
+        @media only screen and (max-width: 1130px) {
+          display: none;
+        }
       }
 
       .right-mobile {
@@ -234,6 +293,18 @@
         bottom: -120px;
         height: 750px;
         z-index: 3;
+        @media only screen and (max-width: 1300px) {
+          height: 650px;
+        }
+        @media only screen and (max-width: 1130px) {
+          right: -30px;
+        }
+        @media only screen and (max-width: 1003px) {
+          right: -20px;
+        }
+        @media only screen and (max-width: 900px) {
+          right: -10px;
+        }
       }
     }
   }
